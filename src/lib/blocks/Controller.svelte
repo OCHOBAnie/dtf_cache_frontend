@@ -6,7 +6,8 @@
 		'text': Components.Text,
         'header': Components.Header,
         'delimiter': Components.Delimiter,
-        'link': Components.Link
+        'link': Components.Link,
+        'media': Components.Media,
 	};
 </script>
 
