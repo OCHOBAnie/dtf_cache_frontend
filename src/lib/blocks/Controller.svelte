@@ -1,13 +1,12 @@
 <script context="module" lang="ts">
     import type { Block } from './Types';
-    import Text from './Text.svelte';
-    import Header from './Header.svelte';
-    import Delimiter from './Delimiter.svelte';
+    import * as Components from './components/index.js'
 
     const options = {
-		'text': Text,
-        'header': Header,
-        'delimiter': Delimiter
+		'text': Components.Text,
+        'header': Components.Header,
+        'delimiter': Components.Delimiter,
+        'link': Components.Link
 	};
 </script>
 
