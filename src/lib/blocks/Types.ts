@@ -53,7 +53,7 @@ export interface ImageData {
     external_service: [];
 };
 
-export interface Media {
+export interface MediaBlock {
     items:           MediaItem[];
     with_background: boolean;
     with_border:     boolean;
