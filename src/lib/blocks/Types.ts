@@ -1,6 +1,6 @@
 export type Block = {
     type: string;
-    data: TextBlock | HeaderBlock | DelimiterBlock | LinkBlock;
+    data: TextBlock | HeaderBlock | DelimiterBlock | LinkBlock | MediaBlock;
     cover: boolean;
     hidden: boolean;
     anchor: string;
