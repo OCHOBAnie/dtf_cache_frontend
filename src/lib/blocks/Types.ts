@@ -52,3 +52,15 @@ export interface ImageData {
     hash:             string;
     external_service: [];
 };
+
+export interface Media {
+    items:           MediaItem[];
+    with_background: boolean;
+    with_border:     boolean;
+}
+
+export interface MediaItem {
+    title:  string;
+    author: string;
+    image:  Image;
+}
