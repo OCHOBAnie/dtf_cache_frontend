@@ -17,7 +17,7 @@
     </div>
 
     <div class="andropov_link__description">
-        {usefullData.description ? usefullData.description : usefullData.title}
+        {usefullData.description || usefullData.title}
     </div>
 
     <div class="andropov_link__host">
