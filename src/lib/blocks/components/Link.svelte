@@ -98,7 +98,6 @@
     .icon {
         position: relative;
         pointer-events: none;
-        /* fill: currentColor; */
     }
 
     a {
