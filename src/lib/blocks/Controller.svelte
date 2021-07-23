@@ -1,22 +1,18 @@
 <script context="module" lang="ts">
-    import type { Block } from './Types';
-    import * as Components from './components/index.js'
+	import type { Block } from './Types';
+	import * as Components from './components/index.js';
 
-    const options = {
-		'text': Components.Text,
-        'header': Components.Header,
-        'delimiter': Components.Delimiter,
-        'link': Components.Link,
-        'media': Components.Media,
-	};
+	const options = Object.fromEntries(
+		Object.keys(Components).map(x => [x.toLowerCase(), Components[x]])
+	);
 </script>
 
 <script lang="ts">
-    export let block: Block;
+	export let block: Block;
 </script>
 
 {#if block.type in options}
-    <svelte:component this={options[block.type]} block={block.data}/>
+	<svelte:component this={options[block.type]} block={block.data} />
 {:else}
-    <span class="bg-red-600">{block.type}</span>
+	<span class="bg-red-600">{block.type}</span>
 {/if}
