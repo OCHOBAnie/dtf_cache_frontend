@@ -36,12 +36,13 @@
 </svelte:head>
 
 <section>
-    <p>
+    <div class="content content--full ">
         {#each blocks as block}
-            <Controller {block}/>
-            <br>
+            <figure>
+                <Controller {block}/>
+            </figure>
         {/each}
-    </p>
+    </div>
 </section>
 
 <style>
@@ -52,4 +53,12 @@
 		align-items: center;
 		flex: 1;
 	}
+
+    .content figure:not(:first-child) {
+        margin-top: 30px;
+    }
+
+    .content figure {
+        margin-bottom: 30px;
+    }
 </style>
