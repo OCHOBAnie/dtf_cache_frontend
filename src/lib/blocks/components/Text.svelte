@@ -1,7 +1,7 @@
 <script context="module" lang="ts">
     import type { TextBlock } from '$lib/blocks/Types';
 
-    import snarkdown from 'snarkdown';
+    import { FromMD } from '$lib/helpers/parsers';
 </script>
 
 <script lang="ts">
@@ -9,8 +9,5 @@
 </script>
 
 <p class="font-bold bg-gray-600">
-    {@html snarkdown(block.text)
-        .replace(/\\_/g, '_')
-        .replace('<a href', '<a target="_blank" href')
-    }
+    {@html FromMD(block.text)}
 </p>
