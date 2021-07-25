@@ -1,5 +1,5 @@
 {
-	"name": "~TODO~",
+	"name": "dtf_cache_frontend",
 	"version": "0.0.1",
 	"scripts": {
 		"dev": "svelte-kit dev",
@@ -39,5 +39,6 @@
 		"cookie": "^0.4.1",
 		"snarkdown": "^2.0.0",
 		"validator": "^13.6.0"
-	}
+	},
+	"license" : "GPL-3.0-or-later"
 }
