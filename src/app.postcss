@@ -113,4 +113,27 @@ button:focus:not(:focus-visible) {
 
 @tailwind components;
 
-@tailwind utilities
+@tailwind utilities;
+
+@media (min-width: 640px) and (max-width: 1339px) {
+	.content .l-island-a {
+		width: 600px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.block-person a, .block-quote a, .block-warning a, .comments__item__text a, .content figcaption a, .content h2 a, .content h3 a, .content h4 a, .content ol a, .content p a, .content ul a, .content-description a, .page--error .error__message a, .profile_comment_favorite__text a, .profile_comment_self__text a, .sitemap a, .subsite_card_simple__description a, .subsite_head__description a, .t-link-classic {
+    color: #346eb8;
+    border-bottom: 1px solid #bfd3ed;
+    cursor: pointer;
+}
+
+.block-person a:hover, .block-quote a:hover, .block-warning a:hover, .comments__item__text a:hover, .content figcaption a:hover, .content h2 a:hover, .content h3 a:hover, .content h4 a:hover, .content ol a:hover, .content p a:hover, .content ul a:hover, .content-description a:hover, .page--error .error__message a:hover, .profile_comment_favorite__text a:hover, .profile_comment_self__text a:hover, .sitemap a:hover, .subsite_card_simple__description a:hover, .subsite_head__description a:hover, .t-link-classic:hover {
+    color: #cd192e;
+    border-bottom: 1px solid #f6b4bc;
+}
+
+a:hover {
+    text-decoration: none;
+}
