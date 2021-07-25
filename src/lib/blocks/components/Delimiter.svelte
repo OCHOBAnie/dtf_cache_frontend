@@ -6,12 +6,14 @@
     export let block: DelimiterBlock;
 </script>
 
-{#if block.type === 'default'}
-    <div class="{block.type}-delimiter block h-[0.6em] text-5xl text-center tracking-widest">
-        ***
-    </div>
-{:else}
-    <div class="{block.type}">
-        *** - {block.type}
-    </div>
-{/if}
+<div class="l-island-a">
+    {#if block.type === 'default'}
+        <div class="{block.type}-delimiter block h-[0.6em] text-5xl text-center tracking-widest">
+            ***
+        </div>
+    {:else}
+        <div class="{block.type}">
+            *** - {block.type}
+        </div>
+    {/if}
+</div>
