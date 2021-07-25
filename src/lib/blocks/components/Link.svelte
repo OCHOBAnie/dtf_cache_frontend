@@ -1,5 +1,6 @@
 <script context="module" lang="ts">
     import type { LinkBlock } from '$lib/blocks/Types';
+    import isUUID from 'validator/lib/isUUID';
 </script>
 
 <script lang="ts">
@@ -10,7 +11,7 @@
 </script>
 
 <a class="andropov_link andropov_link--with_image" href={usefullData.url} target="_blank" rel="noopener noreferrer">
-    <img class="andropov_image" src={imageData.uuid} alt={usefullData.description}>
+    <img class="andropov_image" src={isUUID(imageData.uuid) ? `https://leonardo.osnova.io/${imageData.uuid}/-/scale_crop/200x200/-/format/webp/` : imageData.uuid} alt={usefullData.description}>
     
     <div class="andropov_link__title font-bold">
         {usefullData.title}
