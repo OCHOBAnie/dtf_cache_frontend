@@ -1,6 +1,6 @@
 <script context="module" lang="ts">
     import type { LinkBlock } from '$lib/blocks/Types';
-    import isUUID from 'validator/lib/isUUID';
+    import isUUID from 'validator/lib/isUUID.js';
 </script>
 
 <script lang="ts">
