@@ -17,7 +17,7 @@
                     </video>
                 {:else}
                     <div class="media-single__image" style="max-width: {item.image.data.width}px;">
-                        <img src="https://leonardo.osnova.io/{item.image.data.uuid}/-/preview/800/-/format/webp/" alt="{item.title}">
+                        <img src="https://leonardo.osnova.io/{item.image.data.uuid}/-/preview/1100/-/format/webp/" alt="{item.title}">
                     </div>
                 {/if}
             </div>
@@ -58,5 +58,11 @@
 
     .with_background > div {
         margin: 0 auto;
+    }
+
+    .media-single__image > img {
+        display: block;
+        width: 100%;
+        cursor: zoom-in;
     }
 </style>
