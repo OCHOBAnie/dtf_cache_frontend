@@ -1,5 +1,7 @@
 # dtf_cache_frontend
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f2fd9c3d-9b88-4918-813e-2e8321d6549c/deploy-status)](https://app.netlify.com/sites/agitated-lichterman-469cf3/deploys)
+
 ## Developing
 
 ```bash
