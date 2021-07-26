@@ -62,6 +62,10 @@
             <br>
         {/each} -->
     </p>
+    <form id="form" method="get">
+        <input type="number" name="post_id" placeholder="Id поста" onchange="document.getElementById('form').action = '/cache/' + this.value;">
+        <input type="submit" value="Go">
+     </form>
 </section>
 
 <style>
