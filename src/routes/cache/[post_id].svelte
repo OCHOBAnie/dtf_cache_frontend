@@ -40,7 +40,7 @@
 <main id="page_wrapper">
     <div class="l-entry l-island-round py-[30px] bg-white">
         <Header {entryData}/>
-        <div class="content content--full ">
+        <div class="content">
             {#each entryBlocks as block}
                 <figure>
                     <Controller {block}/>
@@ -77,5 +77,14 @@
 
     .content figure {
         margin-bottom: 30px;
+        display: block;
+    }
+
+    .content {
+        width: 100%;
+        font-size: 18px;
+        line-height: 1.6em;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
     }
 </style>
