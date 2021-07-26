@@ -6,6 +6,19 @@ export type Block = {
     anchor: string;
 };
 
+export interface EntryData {
+    url:     string;
+    authors: Author[];
+    date:    number;
+}
+
+export interface Author {
+    type:       string;
+    url:        string;
+    name:       string;
+    avatar_url: string;
+}
+
 export type HeaderBlock = {
     text: string;
     style: string;
