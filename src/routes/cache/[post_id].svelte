@@ -8,10 +8,10 @@
         const res = await fetch(`/api/${page.params.post_id}`);
 
         if (res.ok) {
-            const blocks = await res.json();
-            console.log(blocks);
+            const entry = await res.json();
+            const { entryBlocks, entryData } = entry;
             return {
-                props: { blocks }
+                props: { entryBlocks, entryData }
             };
         }
 
@@ -25,28 +25,45 @@
 </script>
 
 <script lang="ts">
-    import type { Block } from '$lib/blocks/Types';
+    import type { Block, EntryData } from '$lib/blocks/Types';
     import Controller from '$lib/blocks/Controller.svelte';
+    import Header from '$lib/entry/Header.svelte';
 
-	export let blocks: Block[];
+	export let entryBlocks: Block[];
+	export let entryData: EntryData;
 </script>
 
 <svelte:head>
 	<title>Cache</title>
 </svelte:head>
 
-<section>
-    <div class="content content--full ">
-        {#each blocks as block}
-            <figure>
-                <Controller {block}/>
-            </figure>
-        {/each}
+<main id="page_wrapper">
+    <div class="l-entry l-island-round py-[30px] bg-white">
+        <Header {entryData}/>
+        <div class="content content--full ">
+            {#each entryBlocks as block}
+                <figure>
+                    <Controller {block}/>
+                </figure>
+            {/each}
+        </div>
     </div>
-</section>
+</main>
 
 <style>
-    section {
+    .l-entry {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    @media (min-width: 640px) {
+        .l-island-round {
+            border-radius: 8px;
+        }
+    }
+
+    main {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
