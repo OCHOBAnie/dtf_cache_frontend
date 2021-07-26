@@ -1,6 +1,7 @@
 /* Write your global styles here, in PostCSS syntax */
 
 @import '@fontsource/fira-mono';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 
 @tailwind base;
 
@@ -30,6 +31,8 @@ body {
 		var(--secondary-color) 10.45%,
 		var(--tertiary-color) 41.35%
 	);
+	font-family: 'Roboto', Tahoma;
+    font-weight: 400;
 }
 
 body::before {
@@ -66,7 +69,7 @@ p {
 }
 
 a {
-	color: var(--accent-color);
+	color: black;
 	text-decoration: none;
 }
 
@@ -120,6 +123,13 @@ button:focus:not(:focus-visible) {
 		width: 600px;
 		margin-left: auto;
 		margin-right: auto;
+	}
+}
+
+@media (min-width: 1340px) {
+	#page_wrapper {
+		max-width: 1020px;
+		margin: 0 auto;
 	}
 }
 
