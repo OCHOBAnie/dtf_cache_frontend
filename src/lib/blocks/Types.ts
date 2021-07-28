@@ -1,6 +1,6 @@
 export type Block = {
     type: string;
-    data: TextBlock | HeaderBlock | DelimiterBlock | LinkBlock | MediaBlock | VideoBlock;
+    data: TextBlock | HeaderBlock | DelimiterBlock | LinkBlock | MediaBlock | VideoBlock | AudioBlock;
     cover: boolean;
     hidden: boolean;
     anchor: string;
@@ -99,4 +99,32 @@ export interface VideoData {
 export interface ExternalService {
     name: string;
     id:   string;
+}
+
+export interface AudioBlock {
+    title: string;
+    hash:  string;
+    image: null | Image;
+    audio: AudioClass;
+}
+
+export interface AudioClass {
+    type: string;
+    data: Data;
+}
+
+export interface Data {
+    uuid:       string;
+    filename:   string;
+    size:       number;
+    audio_info: AudioInfo;
+}
+
+export interface AudioInfo {
+    bitrate:       number;
+    duration:      number;
+    channel:       string;
+    framesCount:   number;
+    format:        string;
+    listens_count: number;
 }
