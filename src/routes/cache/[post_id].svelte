@@ -28,9 +28,10 @@
     import type { Block, EntryData } from '$lib/blocks/Types';
     import Controller from '$lib/blocks/Controller.svelte';
     import Header from '$lib/entry/Header.svelte';
+    import Title from '$lib/entry/Title.svelte';
 
-	export let entryBlocks: Block[];
-	export let entryData: EntryData;
+    export let entryBlocks: Block[];
+    export let entryData: EntryData;
 </script>
 
 <svelte:head>
@@ -39,7 +40,11 @@
 
 <main id="page_wrapper">
     <div class="l-entry l-island-round py-[30px] bg-white">
-        <Header {entryData}/>
+        <Header {entryData}>
+            {#if entryData.title.length}
+                <Title {entryData}/>
+            {/if}
+        </Header>
         <div class="content">
             {#each entryBlocks as block}
                 <figure>

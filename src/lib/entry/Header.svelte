@@ -18,17 +18,18 @@
                 <time class="time" title="{localeDate}">{localeDate}</time>
             </a>
         </div>
-    </div> 
+    </div>
+    <slot></slot>
 </nav>
 
 <style>
     .post_info {
-        display: flex;
+        /* display: flex; */
         align-items: center;
         font-size: 16px;
         line-height: 1.5em;
         margin-bottom: 14px;
-        width: 680px;
+        width: 600px;
         margin-left: auto;
         margin-right: auto;
     }

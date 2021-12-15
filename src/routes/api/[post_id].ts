@@ -24,7 +24,9 @@ export async function get({ params }: Request): Promise<EndpointOutput> {
         const entryData = {
             url: entry.url,
             authors: authors,
-            date: entry.date
+            date: entry.date,
+            title: entry.title,
+            isEditorial: entry.isEditorial
         }
         return { body: { entryData, entryBlocks: entry.blocks } };
     } else {

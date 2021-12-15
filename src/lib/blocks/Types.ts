@@ -7,9 +7,11 @@ export type Block = {
 };
 
 export interface EntryData {
-    url:     string;
-    authors: Author[];
-    date:    number;
+    url:         string;
+    authors:     Author[];
+    date:        number;
+    title:       string;
+    isEditorial: boolean;
 }
 
 export interface Author {
